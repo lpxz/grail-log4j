@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="log4j">
+    <property environment="env"/>
+    <property name="java.link" value="../apache-log4j-1.2.15/src/main/java"/>
+    <property name="JRE_LIB" value="../../../pool/jdk1.7.0_13/jre/lib/rt.jar"/>
+    <property name="ECLIPSE_HOME" value="../../"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.7"/>
+    <property name="source" value="1.7"/>
+    <path id="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${build.home}/classes.libraryclasspath"/>
+    <path id="home/lpxz/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar.libraryclasspath"/>
+    <path id="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${activation.jar}.libraryclasspath"/>
+    <path id="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${jaxp.jaxp.jar}.libraryclasspath"/>
+    <path id="home/lpxz/.m2/repository/javax/jms/jms/1.1/jms-1.1.jar.libraryclasspath"/>
+    <path id="home/lpxz/.m2/repository/com/sun/jmx/jmxri/1.2.1/jmxri-1.2.1.jar.libraryclasspath"/>
+    <path id="home/lpxz/.m2/repository/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar.libraryclasspath"/>
+    <path id="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${jndi.jar}.libraryclasspath"/>
+    <path id="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${javaee-api.jar}.libraryclasspath"/>
+    <path id="JUnit 3.libraryclasspath">
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar"/>
+    </path>
+    <path id="log4j.classpath">
+        <pathelement location="classes"/>
+        <pathelement location="bin"/>
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${build.home}/classes.libraryclasspath"/>
+        <path refid="home/lpxz/.m2/repository/javax/mail/mail/1.4/mail-1.4.jar.libraryclasspath"/>
+        <path refid="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${activation.jar}.libraryclasspath"/>
+        <path refid="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${jaxp.jaxp.jar}.libraryclasspath"/>
+        <path refid="home/lpxz/.m2/repository/javax/jms/jms/1.1/jms-1.1.jar.libraryclasspath"/>
+        <path refid="home/lpxz/.m2/repository/com/sun/jmx/jmxri/1.2.1/jmxri-1.2.1.jar.libraryclasspath"/>
+        <path refid="home/lpxz/.m2/repository/com/sun/jdmk/jmxtools/1.2.1/jmxtools-1.2.1.jar.libraryclasspath"/>
+        <path refid="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${jndi.jar}.libraryclasspath"/>
+        <path refid="home/lpxz/eclipse/workspacegrail/apache-log4j-1.2.15/${javaee-api.jar}.libraryclasspath"/>
+        <pathelement location="lib/javax_mail.jar"/>
+        <pathelement location="lib/javax.activation.jar"/>
+        <pathelement location="lib/javax.jms.jar"/>
+        <pathelement location="lib/javax.mail_1.4.jar"/>
+        <pathelement location="lib/javax.xml.jaxp.jar"/>
+        <pathelement location="lib/jmxri-1.2.1.jar"/>
+        <pathelement location="lib/jmxtools-1.2.1.jar"/>
+        <pathelement location="lib/jndi-1.2.1.jar"/>
+        <path refid="JUnit 3.libraryclasspath"/>
+    </path>
+    <path id="run.NumberCruncherServer.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.NumberCruncherServer.bootclasspath"/>
+    <path id="run.HierarchyThresholdTestCase.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.HierarchyThresholdTestCase.bootclasspath"/>
+    <path id="run.Bug24159.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.Bug24159.bootclasspath"/>
+    <path id="run.AsyncAppenderTestCase.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.AsyncAppenderTestCase.bootclasspath"/>
+    <path id="run.FileAppenderTest.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.FileAppenderTest.bootclasspath"/>
+    <path id="run.Sort.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.Sort.bootclasspath"/>
+    <path id="run.Bug24159Perf.classpath">
+        <pathelement location="${JRE_LIB}"/>
+        <path refid="log4j.classpath"/>
+    </path>
+    <path id="run.Bug24159Perf.bootclasspath"/>
+    <target name="init">
+        <mkdir dir="classes"/>
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="classes">
+            <fileset dir="${java.link}">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="org/apache/log4j/util/AbsoluteDateAndTimeFilter.java"/>
+                <exclude name="org/apache/log4j/util/AbsoluteTimeFilter.java"/>
+                <exclude name="org/apache/log4j/util/ISO8601Filter.java"/>
+                <exclude name="org/apache/log4j/util/JunitTestRunnerFilter.java"/>
+                <exclude name="org/apache/log4j/net/SocketServerTestCase.java"/>
+                <exclude name="org/apache/log4j/customLogger/XLoggerTestCase.java"/>
+                <exclude name="org/apache/log4j/util/ControlFilter.java"/>
+                <exclude name="org/apache/log4j/util/LineNumberFilter.java"/>
+                <exclude name="org/apache/log4j/util/RelativeTimeFilter.java"/>
+                <exclude name="org/apache/log4j/util/SunReflectFilter.java"/>
+                <exclude name="org/apache/log4j/util/XMLLineAttributeFilter.java"/>
+                <exclude name="org/apache/log4j/util/XMLTimestampFilter.java"/>
+                <exclude name="org/apache/log4j/net/ShortSocketServer.java"/>
+                <exclude name="org/apache/log4j/jmx/Agent.java"/>
+                <exclude name="org/apache/log4j/net/JMSAppender.java"/>
+                <exclude name="org/apache/log4j/net/JMSSink.java"/>
+                <exclude name="org/apache/log4j/net/SMTPAppender.java"/>
+                <exclude name="org/apache/log4j/net/SMTPAppenderTest.java"/>
+                <exclude name="org/apache/log4j/CoreTestSuite.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="deadlock">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="classes"/>
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="classes" source="${source}" target="${target}">
+            <src path="${java.link}"/>
+            <exclude name="org/apache/log4j/util/AbsoluteDateAndTimeFilter.java"/>
+            <exclude name="org/apache/log4j/util/AbsoluteTimeFilter.java"/>
+            <exclude name="org/apache/log4j/util/ISO8601Filter.java"/>
+            <exclude name="org/apache/log4j/util/JunitTestRunnerFilter.java"/>
+            <exclude name="org/apache/log4j/net/SocketServerTestCase.java"/>
+            <exclude name="org/apache/log4j/customLogger/XLoggerTestCase.java"/>
+            <exclude name="org/apache/log4j/util/ControlFilter.java"/>
+            <exclude name="org/apache/log4j/util/LineNumberFilter.java"/>
+            <exclude name="org/apache/log4j/util/RelativeTimeFilter.java"/>
+            <exclude name="org/apache/log4j/util/SunReflectFilter.java"/>
+            <exclude name="org/apache/log4j/util/XMLLineAttributeFilter.java"/>
+            <exclude name="org/apache/log4j/util/XMLTimestampFilter.java"/>
+            <exclude name="org/apache/log4j/net/ShortSocketServer.java"/>
+            <exclude name="org/apache/log4j/jmx/Agent.java"/>
+            <exclude name="org/apache/log4j/net/JMSAppender.java"/>
+            <exclude name="org/apache/log4j/net/JMSSink.java"/>
+            <exclude name="org/apache/log4j/net/SMTPAppender.java"/>
+            <exclude name="org/apache/log4j/net/SMTPAppenderTest.java"/>
+            <exclude name="org/apache/log4j/CoreTestSuite.java"/>
+            <classpath refid="log4j.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" source="${source}" target="${target}">
+            <src path="deadlock"/>
+            <classpath refid="log4j.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="NumberCruncherServer">
+        <java classname="examples.NumberCruncherServer" failonerror="true" fork="yes">
+            <classpath refid="run.NumberCruncherServer.classpath"/>
+            <bootclasspath>
+                <path refid="run.NumberCruncherServer.bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="HierarchyThresholdTestCase">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.apache.log4j.HierarchyThresholdTestCase" todir="${junit.output.dir}"/>
+            <classpath refid="run.HierarchyThresholdTestCase.classpath"/>
+            <bootclasspath>
+                <path refid="run.HierarchyThresholdTestCase.bootclasspath"/>
+            </bootclasspath>
+        </junit>
+    </target>
+    <target name="Bug24159">
+        <java classname="deadlock.Bug24159" failonerror="true" fork="yes">
+            <classpath refid="run.Bug24159.classpath"/>
+            <bootclasspath>
+                <path refid="run.Bug24159.bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="AsyncAppenderTestCase">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.apache.log4j.AsyncAppenderTestCase" todir="${junit.output.dir}"/>
+            <classpath refid="run.AsyncAppenderTestCase.classpath"/>
+            <bootclasspath>
+                <path refid="run.AsyncAppenderTestCase.bootclasspath"/>
+            </bootclasspath>
+        </junit>
+    </target>
+    <target name="FileAppenderTest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="org.apache.log4j.FileAppenderTest" todir="${junit.output.dir}"/>
+            <classpath refid="run.FileAppenderTest.classpath"/>
+            <bootclasspath>
+                <path refid="run.FileAppenderTest.bootclasspath"/>
+            </bootclasspath>
+        </junit>
+    </target>
+    <target name="Sort">
+        <java classname="examples.Sort" failonerror="true" fork="yes">
+            <classpath refid="run.Sort.classpath"/>
+            <bootclasspath>
+                <path refid="run.Sort.bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="Bug24159Perf">
+    	<java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+    	            <arg line="1"/>
+    	            <classpath refid="run.Bug24159Perf.classpath"/>
+    	            <bootclasspath>
+    	                <path refid="run.Bug24159Perf.bootclasspath"/>
+    	            </bootclasspath>
+    	        </java>
+    	<java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+    	            <arg line="2"/>
+    	            <classpath refid="run.Bug24159Perf.classpath"/>
+    	            <bootclasspath>
+    	                <path refid="run.Bug24159Perf.bootclasspath"/>
+    	            </bootclasspath>
+    	        </java>
+    	<java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+    	            <arg line="4"/>
+    	            <classpath refid="run.Bug24159Perf.classpath"/>
+    	            <bootclasspath>
+    	                <path refid="run.Bug24159Perf.bootclasspath"/>
+    	            </bootclasspath>
+    	        </java>
+    	<java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+    	            <arg line="8"/>
+    	            <classpath refid="run.Bug24159Perf.classpath"/>
+    	            <bootclasspath>
+    	                <path refid="run.Bug24159Perf.bootclasspath"/>
+    	            </bootclasspath>
+    	        </java>
+    	<java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+    	            <arg line="12"/>
+    	            <classpath refid="run.Bug24159Perf.classpath"/>
+    	            <bootclasspath>
+    	                <path refid="run.Bug24159Perf.bootclasspath"/>
+    	            </bootclasspath>
+    	        </java>
+    	
+        <java classname="deadlock.Perf.Bug24159Perf" failonerror="true" fork="yes">
+            <arg line="16"/>
+            <classpath refid="run.Bug24159Perf.classpath"/>
+            <bootclasspath>
+                <path refid="run.Bug24159Perf.bootclasspath"/>
+            </bootclasspath>
+        </java>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
