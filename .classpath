@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="deadlock"/>
+	<classpathentry kind="src" path="java"/>
+	<classpathentry kind="lib" path="lib/javax_mail.jar"/>
+	<classpathentry kind="lib" path="lib/javax.activation.jar"/>
+	<classpathentry kind="lib" path="lib/javax.jms.jar"/>
+	<classpathentry kind="lib" path="lib/javax.mail_1.4.jar"/>
+	<classpathentry kind="lib" path="lib/javax.xml.jaxp.jar"/>
+	<classpathentry kind="lib" path="lib/jmxri-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/jmxtools-1.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/jndi-1.2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="classes"/>
+</classpath>
